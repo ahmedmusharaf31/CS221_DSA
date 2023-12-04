@@ -12,7 +12,7 @@ Hey there! I'm Ahmed Musharaf, and I invite you to join me on this educational a
 
 - **Sample Problems**: Reinforce your understanding by tackling a curated set of sample problems. Practice is key, and this repository is designed to help you apply theoretical knowledge in real-world scenarios.
 
-- **Language Agnostic**: Whether you're comfortable with Python, Java, C++, or another language, you'll find implementations in multiple programming languages. The goal is to cater to a diverse audience with varied language preferences.
+- **Language Agnostic**: Whether you're comfortable with Python, Java, C++, or another language, you'll find implementations easy to understand. The goal is to cater to a diverse audience with varied language preferences.
 
 - **Contributions Welcome**: Learning is a collaborative effort. I wholeheartedly welcome contributions! If you have a new algorithm or data structure to introduce, an enhancement for an existing one, or a valuable suggestion, please follow the [contribution guidelines](CONTRIBUTING.md).
 
