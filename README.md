@@ -1,4 +1,4 @@
-# Ahmed Musharaf's CS221 Data Structures and Algorithms 🚀
+# CS221 Data Structures and Algorithms 🚀
 
 Welcome to my CS221 Data Structures and Algorithms repository! Here, you'll embark on a journey through the fascinating world of data structures and algorithms. This repository is not just a collection of code; it's a documentation of my learning process, complete with explanations, visualizations, and practical examples.
 
