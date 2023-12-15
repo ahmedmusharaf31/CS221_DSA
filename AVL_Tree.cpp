@@ -190,26 +190,16 @@ Node *deleteNode(Node *root, int key)
     return root;
 }
 // Print the tree
-void printTree(Node *root, string indent, bool last)
+void inorder(Node *root)
 {
-    if (root != nullptr)
+    if (root == NULL)
     {
-        cout << indent;
-        if (last)
-        {
-            cout << "R----";
-            indent += " ";
-        }
-        else
-        {
-            cout << "L----";
-            indent += "| ";
-        }
-        cout << root->key << endl;
-
-        printTree(root->left, indent, false);
-        printTree(root->right, indent, true);
+        return;
     }
+
+    inorder(root->left);
+    cout << root->key << " ";
+    inorder(root->right);
 }
 int main()
 {
@@ -222,8 +212,9 @@ int main()
     root = insertNode(root, 61);
     root = insertNode(root, 8);
     root = insertNode(root, 11);
-    printTree(root, "", true);
+    inorder(root);
     root = deleteNode(root, 13);
-    cout << "After deleting " << endl;
-    printTree(root, "", true);
+    cout << endl;
+    cout << "After deleting: " << endl;
+    inorder(root);
 }
