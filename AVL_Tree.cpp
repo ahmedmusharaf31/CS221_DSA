@@ -75,13 +75,21 @@ Node *insertNode(Node *node, int key)
 {
     // Find the correct postion and insert the node
     if (node == NULL)
-        return (newNode(key));
+    {
+        return newNode(key);
+    }
     if (key < node->key)
+    {
         node->left = insertNode(node->left, key);
+    }
     else if (key > node->key)
+    {
         node->right = insertNode(node->right, key);
+    }
     else
+    {
         return node;
+    }
     // Update the balance factor of each node and
     // balance the tree
     node->height = 1 + max(height(node->left),
@@ -121,16 +129,21 @@ Node *deleteNode(Node *root, int key)
 {
     // Find the node and delete it
     if (root == NULL)
+    {
         return root;
-    if (key < root->key)
+    }
 
+    if (key < root->key)
+    {
         root->left = deleteNode(root->left, key);
+    }
     else if (key > root->key)
+    {
         root->right = deleteNode(root->right, key);
+    }
     else
     {
-        if ((root->left == NULL) ||
-            (root->right == NULL))
+        if ((root->left == NULL) || (root->right == NULL))
         {
             Node *temp = root->left ? root->left : root->right;
             if (temp == NULL)
@@ -139,19 +152,22 @@ Node *deleteNode(Node *root, int key)
                 root = NULL;
             }
             else
+            {
                 *root = *temp;
-            free(temp);
+                free(temp);
+            }
         }
         else
         {
             Node *temp = nodeWithMimumValue(root->right);
             root->key = temp->key;
-            root->right = deleteNode(root->right,
-                                     temp->key);
+            root->right = deleteNode(root->right, temp->key);
         }
     }
     if (root == NULL)
+    {
         return root;
+    }
     // Update the balance factor of each node and
     // balance the tree
     root->height = 1 + max(height(root->left),
