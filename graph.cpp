@@ -21,7 +21,7 @@ public:
     }
     void print()
     {
-        for (int i = 1; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
             cout << i << "-->";
             for (auto it : adjlist[i])
@@ -42,4 +42,6 @@ int main()
     g.addedge(4, 3, true);
     g.addedge(1, 4, true);
     g.print();
+
+    return 0;
 }
