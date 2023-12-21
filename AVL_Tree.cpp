@@ -112,7 +112,7 @@ Node *insertNode(Node *node, int key)
     if (balance < -1 && key < node->right->key) // RL
     {
         node->right = rightRotate(node->right);
-        leftRotate(node);
+        return leftRotate(node);
     }
     return node;
 }
