@@ -26,7 +26,7 @@ Graph::Graph(int v)
 void Graph::add_edge(int u, int v)
 {
     adj[u].push_back(v); // add v to u’s list
-    adj[v].push_back(v); // add u to v's list (remove this statement if the graph is directed!)
+    adj[v].push_back(u); // add u to v's list (remove this statement if the graph is directed!)
 }
 void Graph::dfs()
 {
